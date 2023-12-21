@@ -10,6 +10,7 @@ import Carrossel2 from './components/home/Carrossel2';
 import CategoriaNome3 from './components/home/CategoriaNome3';
 import Carrossel3 from './components/home/Carrossel3';
 import { useState } from 'react';
+import Title from './components/Title/Title';
 
 
 function App() {
@@ -23,7 +24,9 @@ function App() {
 
 
         {
-          remedysState ? (<CategoriaNome1 />) : (null)
+          remedysState ? (
+            <Title categoria={'Medicamentos'} />
+          ) : (null)
         }
 
         {/* <CategoriaNome1 />

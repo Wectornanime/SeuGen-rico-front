@@ -1,15 +1,11 @@
-import './CategoriaNome.css';
+import './Title.css';
 
-let Categoria = 'Mais Populares';
-
-function CategoriaNome1() {
+export default function Title({categoria}) {
     return (
         <div className='categoria'>
             <div className='container-nome'>
-                <h1 className='categoria-nome'>{Categoria}</h1>
+                <h1 className='categoria-nome'>{categoria}</h1>
             </div>
         </div>
-    )
-}
-
-export default CategoriaNome1;
+    );
+};
