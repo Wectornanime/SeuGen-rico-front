@@ -4,7 +4,6 @@ import magnify from '../../assets/search-magnify.svg';
 import PesquisaVoz from './PesquisaVoz'; // Importe o componente de pesquisa por voz
 
 function Pesquisa( { remedysState, setRemedysState } ) {
-    const [responseData, setResponseData] = useState(null);
     const [error, setError] = useState(null);
 
 
@@ -19,7 +18,7 @@ function Pesquisa( { remedysState, setRemedysState } ) {
             setError(null);
         } catch (err) {
             console.error('Erro ao buscar dados da API:', err);
-            setResponseData(null);
+            setRemedysState(null);
             setError('Erro ao buscar dados da API');
             }
         };

@@ -11,6 +11,7 @@ import CategoriaNome3 from './components/home/CategoriaNome3';
 import Carrossel3 from './components/home/Carrossel3';
 import { useState } from 'react';
 import Title from './components/Title/Title';
+import Carrossel from './components/Carrossel/Carrossel';
 
 
 function App() {
@@ -25,7 +26,12 @@ function App() {
 
         {
           remedysState ? (
-            <Title categoria={'Medicamentos'} />
+          <>
+            <Title categoria={'Medicamentos Ativos'} />
+            <Carrossel show={'ativo'} remedysState={remedysState} setRemedysState={setRemedysState} />
+            <Title categoria={'Medicamentos Inativos'} />
+            <Carrossel show={'inativo'} remedysState={remedysState} setRemedysState={setRemedysState} />
+          </>
           ) : (null)
         }
 
